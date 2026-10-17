@@ -8,8 +8,7 @@ public class Club
     public string Name { get; private set; }
     public string Description { get; private set; }
     public DateTime CreatedAt { get; private set; }
-    private readonly List<Member> _members = new();
-    public IReadOnlyCollection<Member> Members => _members.AsReadOnly();
+    
     // TODO: danh sách thành viên: field private List<Member> + property IReadOnlyList<Member> Members
     //       (bên ngoài không được .Add() trực tiếp — phải đi qua AddMember)
     private readonly List<Member> _members = new();

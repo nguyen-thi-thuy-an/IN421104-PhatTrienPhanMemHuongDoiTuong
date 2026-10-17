@@ -52,7 +52,7 @@ classDiagram
         +Method
         +Create()
         +Summary()
-        
+       
     }
     
   

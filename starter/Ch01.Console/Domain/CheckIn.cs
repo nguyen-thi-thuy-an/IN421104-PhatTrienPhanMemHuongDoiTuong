@@ -22,8 +22,8 @@ public class CheckIn
     {
         if (registration == null)
             throw new ArgumentNullException(nameof(registration));
-
-        if (registration.Status != RegistrationStatus.Confirmed)
+            
+        if (registration.Status != Registration.Statuses.Confirmed)
             throw new InvalidOperationException("Chỉ cho phép check-in khi đăng ký đã được xác nhận (Confirmed).");
 
         if (string.IsNullOrWhiteSpace(method) || (method != "Manual" && method != "QrCode"))
