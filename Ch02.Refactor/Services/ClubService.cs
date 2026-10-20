@@ -5,53 +5,45 @@ using EduHub.Ch02.Repositories;
 
 namespace EduHub.Ch02.Services;
 
-public class ClubService
+/// <summary>Nghiệp vụ CLB. Mọi phụ thuộc đều là interface, nhận qua constructor (DIP).</summary>
+public class ClubService : IClubService
 {
-    private readonly IClubRepository _clubRepository;
-    private readonly List<Member> _members = new();
+    private readonly IClubRepository _clubs;
+    private readonly IMemberRepository _members;
+    private readonly INotificationService _notifier;
     private readonly IAppLogger _logger;
-    private readonly INotificationServiceFactory _notificationFactory;
 
-    public ClubService(
-        IClubRepository clubRepository, 
-        IAppLogger logger, 
-        INotificationServiceFactory notificationFactory)
+    public ClubService(IClubRepository clubs, IMemberRepository members,
+        INotificationService notifier, IAppLogger logger)
     {
-        _clubRepository = clubRepository;
+        _clubs = clubs;
+        _members = members;
+        _notifier = notifier;
         _logger = logger;
-        _notificationFactory = notificationFactory;
     }
 
-    public Club CreateClub(string name, string description, string presidentEmail, NotificationChannel channel)
+    public Club CreateClub(string name, string description, string presidentEmail)
     {
-        // Gọi logic validate và khởi tạo từ Domain Model (Club)
+        // Quy tắc hợp lệ nằm ở Domain; service chỉ điều phối: lưu + log + thông báo
         var club = Club.Create(name, description);
-        _clubRepository.Add(club);
-
-        var notifier = _notificationFactory.Create(channel);
-        notifier.Send(presidentEmail, $"You are the president of the new club: {name}");
-
+        _clubs.Add(club);
+        _logger.Info($"Club created: {name}");
+        _notifier.Send(presidentEmail, $"Club '{name}' has been created");
         return club;
     }
 
-    public void AddMemberToClub(Guid clubId, string memberName, string email, NotificationChannel channel)
+    public Member AddMember(Guid clubId, string memberName, string email)
     {
-        var club = _clubRepository.GetById(clubId)
+        var club = _clubs.GetById(clubId)
             ?? throw new InvalidOperationException("Club not found");
 
-        var currentMemberCount = _members.Count(m => m.ClubId == clubId);
-        if (!club.HasRoom(currentMemberCount))
+        if (!club.HasRoom(_members.GetByClub(clubId).Count))
             throw new InvalidOperationException($"Club is full (max {Club.MaxMembers} members)");
 
         var member = new Member { Id = Guid.NewGuid(), Name = memberName, Email = email, ClubId = clubId };
         _members.Add(member);
-
-        _logger.Log($"Member {memberName} joined {club.Name}");
-
-        var notifier = _notificationFactory.Create(channel);
-        notifier.Send(email, $"Welcome to {club.Name}!");
+        _logger.Info($"Member {memberName} joined {club.Name}");
+        _notifier.Send(email, $"Welcome to {club.Name}!");
+        return member;
     }
-
-    public List<Club> GetAllClubs() => _clubRepository.GetAll();
-    public List<Member> GetMembers() => _members;
 }
