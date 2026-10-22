@@ -1,0 +1,15 @@
+/Users/steven/repositories/Teach-Build-Assess/subjects/IN4211-Phat-trien-phan-mem-huong-doi-tuong/2026-2027/02_Projects/ch01/starter/Ch01.Console/bin/Debug/net10.0/Ch01.Console
+/Users/steven/repositories/Teach-Build-Assess/subjects/IN4211-Phat-trien-phan-mem-huong-doi-tuong/2026-2027/02_Projects/ch01/starter/Ch01.Console/bin/Debug/net10.0/Ch01.Console.deps.json
+/Users/steven/repositories/Teach-Build-Assess/subjects/IN4211-Phat-trien-phan-mem-huong-doi-tuong/2026-2027/02_Projects/ch01/starter/Ch01.Console/bin/Debug/net10.0/Ch01.Console.runtimeconfig.json
+/Users/steven/repositories/Teach-Build-Assess/subjects/IN4211-Phat-trien-phan-mem-huong-doi-tuong/2026-2027/02_Projects/ch01/starter/Ch01.Console/bin/Debug/net10.0/Ch01.Console.dll
+/Users/steven/repositories/Teach-Build-Assess/subjects/IN4211-Phat-trien-phan-mem-huong-doi-tuong/2026-2027/02_Projects/ch01/starter/Ch01.Console/bin/Debug/net10.0/Ch01.Console.pdb
+/Users/steven/repositories/Teach-Build-Assess/subjects/IN4211-Phat-trien-phan-mem-huong-doi-tuong/2026-2027/02_Projects/ch01/starter/Ch01.Console/obj/Debug/net10.0/Ch01.Console.GeneratedMSBuildEditorConfig.editorconfig
+/Users/steven/repositories/Teach-Build-Assess/subjects/IN4211-Phat-trien-phan-mem-huong-doi-tuong/2026-2027/02_Projects/ch01/starter/Ch01.Console/obj/Debug/net10.0/Ch01.Console.AssemblyInfoInputs.cache
+/Users/steven/repositories/Teach-Build-Assess/subjects/IN4211-Phat-trien-phan-mem-huong-doi-tuong/2026-2027/02_Projects/ch01/starter/Ch01.Console/obj/Debug/net10.0/Ch01.Console.AssemblyInfo.cs
+/Users/steven/repositories/Teach-Build-Assess/subjects/IN4211-Phat-trien-phan-mem-huong-doi-tuong/2026-2027/02_Projects/ch01/starter/Ch01.Console/obj/Debug/net10.0/Ch01.Console.csproj.CoreCompileInputs.cache
+/Users/steven/repositories/Teach-Build-Assess/subjects/IN4211-Phat-trien-phan-mem-huong-doi-tuong/2026-2027/02_Projects/ch01/starter/Ch01.Console/obj/Debug/net10.0/Ch01.Console.sourcelink.json
+/Users/steven/repositories/Teach-Build-Assess/subjects/IN4211-Phat-trien-phan-mem-huong-doi-tuong/2026-2027/02_Projects/ch01/starter/Ch01.Console/obj/Debug/net10.0/Ch01.Console.dll
+/Users/steven/repositories/Teach-Build-Assess/subjects/IN4211-Phat-trien-phan-mem-huong-doi-tuong/2026-2027/02_Projects/ch01/starter/Ch01.Console/obj/Debug/net10.0/refint/Ch01.Console.dll
+/Users/steven/repositories/Teach-Build-Assess/subjects/IN4211-Phat-trien-phan-mem-huong-doi-tuong/2026-2027/02_Projects/ch01/starter/Ch01.Console/obj/Debug/net10.0/Ch01.Console.pdb
+/Users/steven/repositories/Teach-Build-Assess/subjects/IN4211-Phat-trien-phan-mem-huong-doi-tuong/2026-2027/02_Projects/ch01/starter/Ch01.Console/obj/Debug/net10.0/Ch01.Console.genruntimeconfig.cache
+/Users/steven/repositories/Teach-Build-Assess/subjects/IN4211-Phat-trien-phan-mem-huong-doi-tuong/2026-2027/02_Projects/ch01/starter/Ch01.Console/obj/Debug/net10.0/ref/Ch01.Console.dll
