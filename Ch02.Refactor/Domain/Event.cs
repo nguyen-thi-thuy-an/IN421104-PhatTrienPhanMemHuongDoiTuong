@@ -11,6 +11,13 @@ public class Event
     public HashSet<Guid> RegisteredMemberIds { get; } = new();
     public HashSet<Guid> CheckedInMemberIds { get; } = new();
 
+    /// <summary>Tỷ lệ thành viên đã check-in trên tổng số thành viên đăng ký.</summary>
+    public double AttendanceRate =>
+        RegisteredMemberIds.Count == 0
+            ? 0.0
+            : (double)CheckedInMemberIds.Count / RegisteredMemberIds.Count;
+
+
     // TODO (Nhiệm vụ 4): đăng ký tham dự; trả về false nếu thành viên đã đăng ký trước đó.
     public bool Register(Guid memberId)
     {
